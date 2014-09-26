@@ -53,7 +53,7 @@ To reverse the direction of an axis, set `StartPosition = 1` and `EndPosition = 
 ### DateTimeAxis
 This will show date/time values on the axis.
 
-If you are adding `DataPoint`s to a series, the `DateTime` values should be converted to numeric values by the `DateTimeAxis.ToDouble` method.
+If you are adding `DataPoint`s to a series, the `DateTime` values should be converted to numeric values by the `DateTimeAxis.ToDouble` method. Notice if you have imported the WPF (etc) namespace, `OxyPlot.Wpf.DateTimeAxis` is not the class to use. The `ToDouble` method is defined in `OxyPlot.Axes.DateTimeAxis`.
 
 ``` csharp
 mySeries.Points.Add(new DataPoint(DateTimeAxis.ToDouble(myDateTime),myValue))
